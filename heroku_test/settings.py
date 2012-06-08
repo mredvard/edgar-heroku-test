@@ -15,7 +15,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {'default': dj_database_url.config(default='mysql://root:46Vu4mEG@localhost/heroku_test')}
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 #DATABASES = {
 #    'default': {
