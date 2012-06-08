@@ -1,5 +1,10 @@
 # Django settings for heroku_test project.
 import dj_database_url
+import os
+import django
+DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -10,7 +15,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {'default': dj_database_url.config(default='mysql://localhost')}
+DATABASES = {'default': dj_database_url.config(default='mysql://root:46Vu4mEG@localhost/heroku_test')}
 
 #DATABASES = {
 #    'default': {
@@ -122,7 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
